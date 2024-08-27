@@ -20,6 +20,7 @@ public class PessoaJuridica extends Pessoa {
 	@Column(nullable = false)
 	private String inscEstadual;
 	
+	@Column(nullable = false)
 	private String inscMunicipal;
 	
 	@Column(nullable = false)
@@ -28,6 +29,7 @@ public class PessoaJuridica extends Pessoa {
 	@Column(nullable = false)
 	private String razaoSocial;
 	
+	@Column(nullable = false)
 	private String categoria;
 
 	public String getCnpj() {

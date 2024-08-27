@@ -3,6 +3,9 @@ package com.example.demo.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.apache.el.parser.AstFalse;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.ConstraintMode;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
@@ -25,9 +28,11 @@ public class AvaliacaoProduto implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_avaliacao_produto")
 	private long id;
-
+	
+	@Column(nullable = false)
 	private Integer nota;
 	
+	@Column(nullable = false)
 	private String descricao;
 	
 	@ManyToOne(targetEntity = Pessoa.class)
